@@ -1,0 +1,103 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" href="styles/css/index.css" type="text/css">
+        <title>Webnostix</title>
+    </head>
+    
+    <body>
+
+
+<!-- add here libs with cdn. Example:
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> 
+-->
+
+
+
+<div class="container" id="header">
+    <div class="sidebar" id="sidebar"></div>
+
+    <div class="nav" id="topnav">
+      
+        <svg id="navlogo" viewBox="0 0 176 96" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+      <path d="M108.94 45.928l-.183-.092-25.886 31.45 9.506-38.15L73 35.272 45.99 60.43 55 31.27l-19.5-3-10.5 42.5 18.5 12.5 27.11-25.39-7.827 38.38 16.58 11.28 42.756-48.153 2.138 2.184-20.805 49.833 28.36-10.97 11.973-28.303 20.477 15.75 28.527-11.033-34.21-21.305L180.12 25l-29.69.408-11.057 21.232-19.713-20.808-29.99.412 19.27 19.684z" id="b"/>
+      <filter x="-4.5%" y="-12.8%" width="108.9%" height="123.8%" filterUnits="objectBoundingBox" id="a">
+        <feMorphology radius=".5" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"/>
+        <feOffset dy="2" in="shadowSpreadOuter1" result="shadowOffsetOuter1"/>
+        <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"/>
+        <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"/>
+        <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0" in="shadowBlurOuter1"/>
+      </filter>
+    </defs>
+    <g transform="translate(-21 -22)" fill="none" fill-rule="evenodd">
+      <use fill="#000" filter="url(#a)" xlink:href="#b"/>
+      <use fill="#FFF" xlink:href="#b"/>
+    </g>
+  </svg>
+        <ul class='menu-list'>
+            <li>
+                <a href="#">home</a></li>
+            <li><a href="#">about</a></li>
+            <li><a href="#">portfolio</a></li>
+            <li><a href="#">blog</a></li>
+        </ul>
+
+        <div class="menu-trigger" id="menu-toggle"><span></span></div>
+
+
+    </div>
+
+    <div class="logo">
+
+        <svg id="logo" viewBox="0 0 176 96" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+      <path d="M108.94 45.928l-.183-.092-25.886 31.45 9.506-38.15L73 35.272 45.99 60.43 55 31.27l-19.5-3-10.5 42.5 18.5 12.5 27.11-25.39-7.827 38.38 16.58 11.28 42.756-48.153 2.138 2.184-20.805 49.833 28.36-10.97 11.973-28.303 20.477 15.75 28.527-11.033-34.21-21.305L180.12 25l-29.69.408-11.057 21.232-19.713-20.808-29.99.412 19.27 19.684z" id="b"/>
+      <filter x="-4.5%" y="-12.8%" width="108.9%" height="123.8%" filterUnits="objectBoundingBox" id="a">
+        <feMorphology radius=".5" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"/>
+        <feOffset dy="2" in="shadowSpreadOuter1" result="shadowOffsetOuter1"/>
+        <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"/>
+        <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"/>
+        <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0" in="shadowBlurOuter1"/>
+      </filter>
+    </defs>
+    <g transform="translate(-21 -22)" fill="none" fill-rule="evenodd">
+      <use fill="#000" filter="url(#a)" xlink:href="#b"/>
+      <use fill="#FFF" xlink:href="#b"/>
+    </g>
+  </svg>
+
+        <svg class="watermark" viewBox="0 0 176 96" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+      <path d="M108.94 45.928l-.183-.092-25.886 31.45 9.506-38.15L73 35.272 45.99 60.43 55 31.27l-19.5-3-10.5 42.5 18.5 12.5 27.11-25.39-7.827 38.38 16.58 11.28 42.756-48.153 2.138 2.184-20.805 49.833 28.36-10.97 11.973-28.303 20.477 15.75 28.527-11.033-34.21-21.305L180.12 25l-29.69.408-11.057 21.232-19.713-20.808-29.99.412 19.27 19.684z" id="b"/>
+      <filter x="-4.5%" y="-12.8%" width="108.9%" height="123.8%" filterUnits="objectBoundingBox" id="a">
+        <feMorphology radius=".5" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"/>
+        <feOffset dy="2" in="shadowSpreadOuter1" result="shadowOffsetOuter1"/>
+        <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"/>
+        <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"/>
+        <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0" in="shadowBlurOuter1"/>
+      </filter>
+    </defs>
+    <g transform="translate(-21 -22)" fill="none" fill-rule="evenodd">
+      <use fill="" filter="url(#a)" xlink:href="#b"/>
+      <use fill="rgba(250,250,250, 0.1)" xlink:href="#b"/>
+    </g>
+  </svg>
+
+
+        <h3>WEBNOSTIX</h3>
+        <p>Faster loading Websites that Look Great on all Devices</p>
+        <a href="#" class="button">Learn More</a>
+    </div>
+
+</div>
+        
+        
+        
+<script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+<script src="scripts/index.js"></script>
+   </body> 
+    </html>

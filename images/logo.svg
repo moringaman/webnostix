@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 15.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="175px" height="119px" viewBox="0 0 175 119" style="enable-background:new 0 0 175 119;" xml:space="preserve">
+<filter  height="113.6%" width="108.9%" y="-5.0%" x="-4.4%" id="filter-2" filterUnits="objectBoundingBox">
+	<feMorphology  result="shadowSpreadOuter1" operator="dilate" radius="0.5" in="SourceAlpha"></feMorphology>
+	<feOffset  result="shadowOffsetOuter1" dx="0" dy="2" in="shadowSpreadOuter1"></feOffset>
+	<feGaussianBlur  stdDeviation="2" result="shadowBlurOuter1" in="shadowOffsetOuter1"></feGaussianBlur>
+	<feComposite  in2="SourceAlpha" result="shadowBlurOuter1" operator="out" in="shadowBlurOuter1"></feComposite>
+	<feColorMatrix  type="matrix" in="shadowBlurOuter1" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0"></feColorMatrix>
+</filter>
+<title>Combined Shape</title>
+<desc>Created with Sketch.</desc>
+<g id="Page-1">
+	<g id="A5" transform="translate(-34.000000, -3.000000)">
+		<g id="Combined-Shape">
+			<g style="filter:url(#filter-2);">
+				<path d="M122.299,43.5L96.871,78.455l9.505-44.504L87.19,23.935l-27.2,33.928L69.45,15.04L48.636,5L38,82.787l18.51,10.367
+					l28.101-38.207l-7.828,50.184l16.581,10.366l43.118-57.51l1.776,1.814l-20.805,49.833l28.359-10.97l11.973-28.304l20.478,15.752
+					l28.526-11.035l-34.21-21.305l21.54-30.545l-29.688,0.409l-11.059,21.232L133.66,24.06l-29.989,0.413L122.299,43.5z"/>
+			</g>
+			<g>
+				<path id="path-1_1_" style="fill:#FFFFFF;" d="M122.299,43.5L96.871,78.455l9.505-44.504L87.19,23.935l-27.2,33.928L69.45,15.04
+					L48.636,5L38,82.787l18.51,10.367l28.101-38.207l-7.828,50.184l16.581,10.366l43.118-57.51l1.776,1.814l-20.805,49.833
+					l28.359-10.97l11.973-28.304l20.478,15.752l28.526-11.035l-34.21-21.305l21.54-30.545l-29.688,0.409l-11.059,21.232
+					L133.66,24.06l-29.989,0.413L122.299,43.5z"/>
+			</g>
+		</g>
+	</g>
+</g>
+</svg>
