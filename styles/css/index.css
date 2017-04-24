@@ -91,20 +91,23 @@ body {
 }
 #header .nav ul > li {
   display: inline;
-  margin: 5px 20px 5px 20px;
+  margin: 5px 25px 5px 25px;
   font-family: arial, sans serif;
-  line-height: 10px;
+  line-height: 20px;
   letter-spacing: 1px;
 }
+#header .nav ul > li:hover {
+  opacity: 1.0;
+}
 #header .nav a {
-  font-size: 14px;
+  font-size: 0.7rem;
   font-weight: lighter;
   text-decoration: none;
   color: #fff;
   text-transform: uppercase;
   opacity: 0.6;
 }
-#header .nav a :hover {
+#header .nav a:hover {
   opacity: 1.0;
 }
 #header .logo {
@@ -178,4 +181,24 @@ body {
   left: 0;
   z-index: 99;
   display: none;
+}
+#sidebar ul.side-menu {
+  list-style: none;
+  margin-top: 70px;
+  display: block;
+  width: 100%;
+  margin-left: 0px;
+  padding: 0px;
+}
+#sidebar ul.side-menu li:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+#sidebar ul.side-menu li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: roboto, sans-serif;
+  line-height: 30px;
+  color: #fff;
+  font-size: 0.7rem;
+  margin-left: 30px;
 }

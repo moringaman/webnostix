@@ -91,30 +91,37 @@ repeat: no-repeat;
         margin-right: 50px;
         position: absolute;
         opacity: 0.5;
+        
       }
     
     ul{
       margin-left: 50px;
+      
     }
     
     ul >li {
       display: inline;
-      margin: 5px 20px 5px 20px;;
+      margin: 5px 25px 5px 25px;;
       font-family: arial, sans serif;
-      line-height: 10px; 
+      line-height: 20px; 
       letter-spacing: 1px;
+      
+        
+        &:hover {
+         opacity: 1.0;   
+        }
       
         }
     
     a {
-      font-size: 14px;
+      font-size: 0.7rem;
       font-weight: lighter;
       text-decoration: none;
       color: #fff;
       text-transform: uppercase;
       opacity: 0.6;
       
-      :hover {
+      &:hover {
         opacity: 1.0;
       }
       
@@ -211,5 +218,39 @@ repeat: no-repeat;
   left: 0;
   z-index: 99;
   display: none;
+    
+   ul.side-menu {
+       
+            list-style: none;
+            margin-top: 70px;
+            display: block;
+            width: 100%;
+            margin-left: 0px;
+           padding: 0px;
+        
+       li {
+           
+           
+           
+            &:hover {
+               background-color: rgba(255,255,255, 0.1);
+           } 
+       
+       a {
+           text-decoration: none;
+           text-transform: uppercase;
+           font-family: roboto, sans-serif;
+           line-height: 30px;
+           color: #fff;
+           font-size: 0.7rem;
+           margin-left: 30px;
+           
+           
+                
+        }
+       
+      
+     }
+    }
  
 }

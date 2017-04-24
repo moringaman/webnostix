@@ -12,7 +12,7 @@
     "use strict";
     
     var headerModule = {
-      
+        // Set initial variables & Call Module functions
         init: function () {
             this.shoNavList = true;
             this.cacheDom();
@@ -20,7 +20,7 @@
             this.toggleNav();
             this.shoLogo();
         },
-    
+        // Cache our mudules DOM elements 
         cacheDom: function () {
             this.$window = $(window);
             this.$element = $('#header');
@@ -29,11 +29,11 @@
             this.$logo = this.$element.find('#logo');
             this.$menuToggle = this.$element.find('#menu-toggle');
         },
-        
+        // fade in WX logo
         shoLogo: function (){
             this.$logo.fadeTo(5000, 0.9);
         },
-    
+        // Module Event listeners
         bindEvents: function () {
             this.$window.on('resize', this.checkViewPort.bind(this));
             this.$menuToggle.on('click', this.toggleMenu.bind(this));
@@ -43,7 +43,7 @@
             console.log("screen width: " + this.viewPort);
             this.toggleNav(this.viewPort);    
         },
-        
+        // Toggle the top Navlist dependent on viewport size;
         toggleNav: function (a) {
             if (a < 667) {
                 this.$navList.hide(); 
@@ -55,7 +55,7 @@
                 return this.showNavList;
             }
         },
-      
+       // toggle side bar menu
         toggleMenu: function () {
             this.$sideBar.toggle("slow");
             console.log('toggle ' + this.$sideBar);
