@@ -7,6 +7,7 @@ html, body, h1, h2, h3, h4, {
 body {
  background-color: #fff;
   height: 2000px;
+font-family: 'Roboto', sans-serif;
 
 }
 
@@ -31,6 +32,23 @@ repeat: no-repeat;
   padding-top:0px;
   position:relative;
   z-index: 0;
+    
+    
+     svg.watermark {
+     width: 200%;
+     z-index: -1;
+     position: fixed;
+     top: -300px;
+    left: -500px;
+    bottom: -50px;
+    opacity: 0.7;
+      
+      @media (max-width: 667px) {
+          width: 200%;
+          top: -20px;
+          left: -100px;
+      }
+    }
   
   .nav {
       background-color: transparent;
@@ -70,6 +88,7 @@ repeat: no-repeat;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+       
     }
     
     .menu-trigger span:before {
@@ -152,20 +171,12 @@ repeat: no-repeat;
    
   }
   
-  svg.watermark {
-     width: 200%;
-     z-index: -1;
-     position: fixed;
-     top: -300px;
-    left: -500px;
-    bottom: -50px;
-    opacity: 0.7;
-    }
+ 
   
   h3{
     color:#ffffff;
     font-family: gulim, sans-serif;
-    margin:20px auto;
+    margin:15px auto;
     font-size: 2rem;
     opacity: .8;
     font-weight: lighter;
@@ -181,7 +192,7 @@ repeat: no-repeat;
     font-size: 14px;
     font-style: italic;
     font-weight: lighter;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
   
   .button {
@@ -219,6 +230,46 @@ repeat: no-repeat;
   z-index: 99;
   display: none;
     
+    #close-button {
+        
+        height: 30px;
+        width: 30px;
+        background-color: transparent;
+        border-radius: 50%;
+        position: relative;
+        top: 15px;
+        left: 190px;
+        transform: rotate(45deg);
+        
+        
+        span, span:before, span:after {
+            
+        background-color: #fff;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        }
+        
+        span {
+          height: 2px;
+          width: 22px; 
+          transform: translate(-50%, -50%);  
+         }
+        
+        
+        span:before {
+            content: '';
+        }
+        
+        
+        span:after{
+            content: "";
+            height: 22px;
+            width: 2px;
+            transform: translate(-50%, -50%);
+        }
+    }
+    
    ul.side-menu {
        
             list-style: none;
@@ -244,6 +295,7 @@ repeat: no-repeat;
            color: #fff;
            font-size: 0.7rem;
            margin-left: 30px;
+           letter-spacing: 1px;
            
            
                 
