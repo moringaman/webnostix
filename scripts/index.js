@@ -41,20 +41,20 @@
         bindEvents: function () {
             this.$window.on('resize', this.checkViewPort.bind(this));
             this.$menuToggle.on('click', this.toggleMenu.bind(this));
-            this.$menuToggle.on('click',this.rotateAnimation.bind(this));
+            this.$menuToggle.on('click', this.rotateAnimation.bind(this));
             this.$btnClose.on('click', this.toggleMenu.bind(this));
-             this.$btnClose.on('click', this.rotateAnimation.bind(this));
+            this.$btnClose.on('click', this.rotateAnimation.bind(this));
         },
         checkViewPort: function () {
             this.viewPort = this.$window.width();
             console.log("screen width: " + this.viewPort);
-            this.toggleNav(this.viewPort);    
+            this.toggleNav(this.viewPort);
         },
         // Toggle the top Navlist dependent on viewport size;
         toggleNav: function (a) {
             if (this.viewPort < 667) {
-                this.$navList.hide(); 
-                this.shoNavList = false; 
+                this.$navList.hide();
+                this.shoNavList = false;
             } else {
                 this.$navList.show();
                 this.shoNavList = true;
@@ -62,10 +62,10 @@
         },
        // toggle side bar menu
         toggleMenu: function () {
-            this.$sideBar.toggle("slow");
+            this.$sideBar.toggle('slow');
             this.sideClosed = !this.sideClosed;
             if (this.viewPort < 450) {
-                this.$logoSection.fadeToggle(1000);  
+                this.$logoSection.fadeToggle(1000);
             }
             console.log('toggle ' + this.$sideBar);
             if (this.shoNavList) {
@@ -74,30 +74,29 @@
             }
         },
         
-        isBarClosed: function() {
+        isBarClosed: function () {
             console.log(this.sideClosed);
-                    if (!this.sideClosed) {
-                        return 222;
-                    } else {
-                        return -222;
-                    }
+            if (!this.sideClosed) {
+                return 222;
+            } else {
+                return -222;
+            }
         },
        
-         rotateAnimation: function(){
-          var btnClose = this.$btnClose;
-         $({t:0}).animate(
-             {
-                 t: this.isBarClosed()
-             },
-         {
-             duration:1000,
-             step:function(now) {
-               btnClose.css('transform', 'rotate(' + now + 'deg)');
-             }
-         }); 
-            
+        rotateAnimation: function () {
+            var btnClose = this.$btnClose;
+            $({t: 0}).animate(
+                {
+                    t: this.isBarClosed()
+                },
+                {
+                    duration: 1000,
+                    step: function (now) {
+                        btnClose.css('transform', 'rotate(' + now + 'deg)');
+                    }
+                }
+            );
         }
-        
     };
         
        
@@ -106,16 +105,5 @@
     headerModule.init();
  
 }));
-
-
-
-/* function() {
-                     console.log(this.sideClosed);
-                    if (this.sideClosed) {
-                        return 222;
-                    } else {
-                        return -222;
-                    }
-                 } */
 
 
