@@ -14,6 +14,7 @@
         
         
         init: function () {
+            this.sideClosed = true;
             this.shoNavList = true;
             this.cacheDom();
             this.bindEvents();
@@ -40,7 +41,9 @@
         bindEvents: function () {
             this.$window.on('resize', this.checkViewPort.bind(this));
             this.$menuToggle.on('click', this.toggleMenu.bind(this));
+            this.$menuToggle.on('click',this.rotateAnimation.bind(this));
             this.$btnClose.on('click', this.toggleMenu.bind(this));
+             this.$btnClose.on('click', this.rotateAnimation.bind(this));
         },
         checkViewPort: function () {
             this.viewPort = this.$window.width();
@@ -59,8 +62,8 @@
         },
        // toggle side bar menu
         toggleMenu: function () {
-            //this.$btnClose.animate()
             this.$sideBar.toggle("slow");
+            this.sideClosed = !this.sideClosed;
             if (this.viewPort < 450) {
                 this.$logoSection.fadeToggle(1000);  
             }
@@ -69,13 +72,50 @@
                 this.$navList.fadeToggle(2000);
     
             }
+        },
+        
+        isBarClosed: function() {
+            console.log(this.sideClosed);
+                    if (!this.sideClosed) {
+                        return 222;
+                    } else {
+                        return -222;
+                    }
+        },
+       
+         rotateAnimation: function(){
+          var btnClose = this.$btnClose;
+         $({t:0}).animate(
+             {
+                 t: this.isBarClosed()
+             },
+         {
+             duration:1000,
+             step:function(now) {
+               btnClose.css('transform', 'rotate(' + now + 'deg)');
+             }
+         }); 
+            
         }
         
     };
+        
+       
                    
                 
     headerModule.init();
  
 }));
+
+
+
+/* function() {
+                     console.log(this.sideClosed);
+                    if (this.sideClosed) {
+                        return 222;
+                    } else {
+                        return -222;
+                    }
+                 } */
 
 
