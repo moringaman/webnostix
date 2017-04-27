@@ -15,23 +15,30 @@ font-family: 'Roboto', sans-serif;
   background-image: url("../../images/logo.svg"); 
  background: rgb(82,126,228);
 background-position: cover;
+    background-size: 600% 600%;
 repeat: no-repeat;
 /* Old browsers */
   background: -moz-linear-gradient(-45deg, rgba(82,126,228,1) 0%, rgba(144,206,171,1) 200%); /* FF3.6-15 */
   background: -webkit-linear-gradient(-45deg, rgba(82,126,228,1) 0%,rgba(144,206,171,1) 200%); /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(135deg, rgba(82,126,228,1) 0%,rgba(144,206,171,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#527ee4', endColorstr='#90ceab',GradientType=1 );
-  /* IE6-9 fallback on horizontal gradient */
+/* Gradient Animation */
+-webkit-animation: AnimationName 17s ease infinite;
+-moz-animation: AnimationName 17s ease infinite;
+animation: AnimationName 17s ease infinite;
+    
+    
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0px 0px 0px 0px;
-  height: 600px;
+  height: 650px;
   max-width: 100%;
   overflow: hidden;
   padding-top:0px;
   position:relative;
   z-index: 0;
+    
     
     
      svg.watermark {
@@ -215,6 +222,38 @@ repeat: no-repeat;
   }
   
  }
+    
+    #wave {
+        height: 250px;;
+        width: 100%;
+        background-image: url("../../images/wave.svg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        z-index:0;
+        position: absolute;
+        bottom: 0px;
+        margin: auto;
+        
+        @media (min-width: 1208px) {
+            bottom: 0px;
+            height: 300px;
+        }
+        
+           @media (min-width: 1547px) {
+             bottom: 0px;
+            height: 350px;
+        }
+        
+            @media (min-width: 1651px) {
+             bottom: 0px;
+            height: 400px;
+        }
+        
+            @media (max-width: 667px) {
+            bottom: 0px;
+            height: 200px;
+        }
+    }
 
 }
 
@@ -223,7 +262,7 @@ repeat: no-repeat;
     width: 250px;
     height: 2000px;
  // background-image: url("../../images/logo.svg");
-   background-color: rgba(205,255,255, 0.4);
+   background-color: rgba(250,250,250, 0.4);
   position: fixed;
   top: 0;
   bottom: 0;
@@ -306,4 +345,22 @@ repeat: no-repeat;
      }
     }
  
+}
+
+//animations
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:4% 0%}
+    50%{background-position:97% 100%}
+    100%{background-position:4% 0%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:4% 0%}
+    50%{background-position:97% 100%}
+    100%{background-position:4% 0%}
+}
+@keyframes AnimationName { 
+    0%{background-position:4% 0%}
+    50%{background-position:97% 100%}
+    100%{background-position:4% 0%}
 }

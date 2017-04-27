@@ -1,7 +1,7 @@
 /**
  * index.js */
 /*jslint browser: true */
-/*global $, jQuery, alert*/
+/*global $ */
 
 /*jslint vars: true, plusplus: true, devel: true, nomen: true, indent: 4, maxerr: 50 */ /* define */
 
@@ -51,7 +51,7 @@
             this.toggleNav(this.viewPort);
         },
         // Toggle the top Navlist dependent on viewport size;
-        toggleNav: function (a) {
+        toggleNav: function () {
             if (this.viewPort < 667) {
                 this.$navList.hide();
                 this.shoNavList = false;
@@ -100,10 +100,44 @@
     };
         
        
-                   
+    var navigationScroller = {
+            
+            init: function () {
+                this.cacheDom();
+                this.bindEvents();
+            },
+            cacheDom: function () {
+                //cache menu links
+                this.$element = headerModule.$element.find('#topNav');
+                console.log(this.$element);
+                this.$list = this.$element.find('.menu-list');
+                console.log(this.$list);
+                this.$liHome = this.$list.find('li.home');
+                console.log(this.$liHome);
+                this.$lnkHome = $('#home');
+                console.log(this.$lnkHome);
+                this.$lnkHome = this.$element.find('#portfolio');
+                this.$lnkHome = this.$element.find('#blog');
+                //cache section divs
+                this.$section1 = $('#section1');
+            },
+            
+            bindEvents: function () {
+                this.$lnkHome.on('click', this.scrollTo.bind(this, this.$lnkHome));
+            },
+        
+            scrollTo: function (linkName) {
+                
+                console.log(linkName);
+              var scrolled=scrolled-300;
+               $(linkName).animate({
+               scrollTop: scrolled
+              });
+            }
+        };         
                 
     headerModule.init();
- 
+    navigationScroller.init();
 }));
 
 

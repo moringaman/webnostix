@@ -16,6 +16,7 @@ body {
   background-image: url("../../images/logo.svg");
   background: #527ee4;
   background-position: cover;
+  background-size: 600% 600%;
   repeat: no-repeat;
   /* Old browsers */
   background: -moz-linear-gradient(-45deg, #527ee4 0%, #90ceab 200%);
@@ -25,12 +26,15 @@ body {
   background: linear-gradient(135deg, #527ee4 0%, #90ceab 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#527ee4', endColorstr='#90ceab', GradientType=1);
-  /* IE6-9 fallback on horizontal gradient */
+  /* Gradient Animation */
+  -webkit-animation: AnimationName 17s ease infinite;
+  -moz-animation: AnimationName 17s ease infinite;
+  animation: AnimationName 17s ease infinite;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0px 0px 0px 0px;
-  height: 600px;
+  height: 650px;
   max-width: 100%;
   overflow: hidden;
   padding-top: 0px;
@@ -180,10 +184,45 @@ body {
   z-index: 11;
   line-height: 30px;
 }
+#header #wave {
+  height: 250px;
+  width: 100%;
+  background-image: url("../../images/wave.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 0;
+  position: absolute;
+  bottom: 0px;
+  margin: auto;
+}
+@media (min-width: 1208px) {
+  #header #wave {
+    bottom: 0px;
+    height: 300px;
+  }
+}
+@media (min-width: 1547px) {
+  #header #wave {
+    bottom: 0px;
+    height: 350px;
+  }
+}
+@media (min-width: 1651px) {
+  #header #wave {
+    bottom: 0px;
+    height: 400px;
+  }
+}
+@media (max-width: 667px) {
+  #header #wave {
+    bottom: 0px;
+    height: 200px;
+  }
+}
 #sidebar {
   width: 250px;
   height: 2000px;
-  background-color: rgba(205, 255, 255, 0.4);
+  background-color: rgba(250, 250, 250, 0.4);
   position: fixed;
   top: 0;
   bottom: 0;
@@ -243,4 +282,37 @@ body {
   font-size: 0.7rem;
   margin-left: 30px;
   letter-spacing: 1px;
+}
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 4% 0%;
+  }
+  50% {
+    background-position: 97% 100%;
+  }
+  100% {
+    background-position: 4% 0%;
+  }
+}
+@-moz-keyframes AnimationName {
+  0% {
+    background-position: 4% 0%;
+  }
+  50% {
+    background-position: 97% 100%;
+  }
+  100% {
+    background-position: 4% 0%;
+  }
+}
+@keyframes AnimationName {
+  0% {
+    background-position: 4% 0%;
+  }
+  50% {
+    background-position: 97% 100%;
+  }
+  100% {
+    background-position: 4% 0%;
+  }
 }
