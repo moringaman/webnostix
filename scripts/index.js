@@ -109,30 +109,46 @@
             cacheDom: function () {
                 //cache menu links
                 this.$element = headerModule.$element.find('#topNav');
-                console.log(this.$element);
+                //console.log(this.$element);
                 this.$list = this.$element.find('.menu-list');
-                console.log(this.$list);
-                this.$liHome = this.$list.find('li.home');
-                console.log(this.$liHome);
-                this.$lnkHome = $('#home');
-                console.log(this.$lnkHome);
-                this.$lnkHome = this.$element.find('#portfolio');
-                this.$lnkHome = this.$element.find('#blog');
+                console.log(this.$list.length);
+               // console.log(this.$list);
+               // Iterate through ul and cache each child element
+               
+                var items = this.$list.find("li");
+                console.log(items.length);
+                for (var i = 0; i < items.length; ++i) {   
+                console.log((items[i]).className);
+                }
+               
+                this.$liHome = this.$list.find('li.home:first-child');
+                this.$liAbout = this.$list.find('li.about:nth-child(2)');
+                this.$liPortfolio = this.$list.find('li.portfolio:nth-child(3)');
+                this.$lnkHome = this.$liHome.find("a");
+                this.$lnkAbout =this.$liAbout.find("a");
+               this.$lnkPortfolio = this.$liPortfolio.find("a");
+               // this.$lnkHome = this.$element.find('#blog');
                 //cache section divs
-                this.$section1 = $('#section1');
+                this.$homeSection = $('#HomeSection');
             },
             
             bindEvents: function () {
+                //link.on('click', this.scrollTo.bind(this, link));
                 this.$lnkHome.on('click', this.scrollTo.bind(this, this.$lnkHome));
+                this.$lnkAbout.on('click', this.scrollTo.bind(this, this.$lnkAbout));
+                this.$lnkPortfolio.on('click', this.scrollTo.bind(this, this.$lnkPortfolio));
             },
         
             scrollTo: function (linkName) {
-                
-                console.log(linkName);
-              var scrolled=scrolled-300;
-               $(linkName).animate({
-               scrollTop: scrolled
-              });
+               
+              var $section = '#' + linkName[0].innerHTML + 'Section';
+             var toPosition = $($section).offset().top;
+                console.log($section);
+                 console.log(toPosition);
+              
+               $('html, body').animate({
+               scrollTop: toPosition
+              }, 2000, 'swing');
             }
         };         
                 
