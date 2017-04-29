@@ -286,6 +286,17 @@ body {
 #homeSection {
   margin: auto 10%;
 }
+#scrollToTop {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background-color: deepskyblue;
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  z-index: 99;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
 @-webkit-keyframes AnimationName {
   0% {
     background-position: 4% 0%;
