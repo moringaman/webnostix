@@ -286,6 +286,7 @@ body {
 #homeSection {
   margin: auto 10%;
 }
+<<<<<<< HEAD
 #scrollToTop {
   height: 60px;
   width: 60px;
@@ -297,6 +298,8 @@ body {
   z-index: 99;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
+=======
+>>>>>>> c6d7df1fa8941e98ffb669c3ca6fb841e8f5bb7f
 @-webkit-keyframes AnimationName {
   0% {
     background-position: 4% 0%;
