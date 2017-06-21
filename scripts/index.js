@@ -31,11 +31,12 @@
             this.$logoSection = this.$element.find('.logo');
             this.$logo = this.$logoSection.find('#logo');
             this.$menuToggle = this.$element.find('#menu-toggle');
+            this.$menuToggleInner = this.$menuToggle.find('span');
             this.viewPort = this.$window.width();
         },
         // fade in WX logo
         shoLogo: function () {
-            this.$logo.fadeTo(5000, 0.9);
+            this.$logo.fadeTo(5000, 0.6);
         },
         // Module Event listeners
         bindEvents: function () {
@@ -77,9 +78,9 @@
         isBarClosed: function () {
             console.log(this.sideClosed);
             if (!this.sideClosed) {
-                return 222;
+                return 495;
             } else {
-                return -222;
+                return -444;
             }
         },
        
@@ -91,6 +92,7 @@
                 },
                 {
                     duration: 1000,
+                    easing: 'swing',
                     step: function (now) {
                         btnClose.css('transform', 'rotate(' + now + 'deg)');
                     }
@@ -108,6 +110,7 @@
             },
             cacheDom: function () {
                 //cache menu links
+                this.$window = headerModule.$window;
                 this.$element = headerModule.$element.find('#topNav');
                 //console.log(this.$element);
                 this.$list = this.$element.find('.menu-list');
@@ -120,7 +123,7 @@
                 for (var i = 0; i < items.length; ++i) {   
                 console.log((items[i]).className);
                 }
-               
+                this.$btnToTop = headerModule.$element.find('#scrollToTop');
                 this.$liHome = this.$list.find('li.home:first-child');
                 this.$liAbout = this.$list.find('li.about:nth-child(2)');
                 this.$liPortfolio = this.$list.find('li.portfolio:nth-child(3)');
@@ -137,6 +140,9 @@
                 this.$lnkHome.on('click', this.scrollTo.bind(this, this.$lnkHome));
                 this.$lnkAbout.on('click', this.scrollTo.bind(this, this.$lnkAbout));
                 this.$lnkPortfolio.on('click', this.scrollTo.bind(this, this.$lnkPortfolio));
+                this.$window.on('scroll', this.pageScrollPos.bind(this));
+                this.$btnToTop.on('click', this.scrollTop.bind(this));
+            
             },
         
             scrollTo: function (linkName) {
@@ -149,7 +155,31 @@
                $('html, body').animate({
                scrollTop: toPosition
               }, 2000, 'swing');
-            }
+            },
+        
+            pageScrollPos: function () {
+               var scrollPos = headerModule.$window.scrollTop();
+                console.log(scrollPos);
+                if (scrollPos > 350) {
+                   // show scroll to top button
+                    this.$btnToTop.show('fast');
+                   headerModule.$menuToggleInner.css('background-color', "royalblue");
+                    headerModule.$menuToggleInner.addClass('special');
+                    headerModule.$sideBar.css('background-color', 'rgba(107, 168, 220, 0.4)');
+                } else {
+                    this.$btnToTop.hide('fast');
+                     headerModule.$menuToggleInner.removeClass('special');
+                    headerModule.$menuToggleInner.css('background-color', "white");
+                    headerModule.$sideBar.css('background-color', 'rgba(255,255,255, 0.2)');
+                }
+            },
+        
+        scrollTop: function () {
+            //scroll window to the top
+            $('html, body').animate({
+               scrollTop: 0
+              }, 1000, 'swing');
+        }
         };         
                 
     headerModule.init();

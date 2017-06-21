@@ -3,7 +3,8 @@ body,
 h1,
 h2,
 h3,
-h4 {
+h4,
+button {
   margin: 0px;
   outline: none;
 }
@@ -13,33 +14,29 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 #header {
-  background-image: url("../../images/logo.svg");
-  background: #527ee4;
-  background-position: cover;
-  background-size: 600% 600%;
+  background: url("../../images/officedesk.jpg");
+  /* background: rgb(82,126,228);*/
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
   repeat: no-repeat;
-  /* Old browsers */
-  background: -moz-linear-gradient(-45deg, #527ee4 0%, #90ceab 200%);
-  /* FF3.6-15 */
-  background: -webkit-linear-gradient(-45deg, #527ee4 0%, #90ceab 200%);
-  /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(135deg, #527ee4 0%, #90ceab 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#527ee4', endColorstr='#90ceab', GradientType=1);
-  /* Gradient Animation */
-  -webkit-animation: AnimationName 17s ease infinite;
-  -moz-animation: AnimationName 17s ease infinite;
-  animation: AnimationName 17s ease infinite;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0px 0px 1000px 0px;
-  height: 650px;
+  height: 700px;
   max-width: 100%;
   overflow: hidden;
   padding-top: 0px;
   position: relative;
-  z-index: 0;
+  z-index: 4;
+}
+@media (max-width: 667px) {
+  #header {
+    background-size: 200% 100%;
+    background-position-x: left -200%;
+    height: 600px;
+  }
 }
 #header svg.watermark {
   width: 200%;
@@ -91,6 +88,16 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+#header .nav .menu-trigger span.special:before {
+  content: '';
+  background-color: royalblue;
+  top: -6px;
+}
+#header .nav .menu-trigger span.special:after {
+  content: '';
+  background-color: royalblue;
+  top: 6px;
+}
 #header .nav .menu-trigger span:before {
   content: '';
   top: -6px;
@@ -134,12 +141,17 @@ body {
 #header .logo {
   position: relative;
   margin: auto;
-  margin-top: 150px;
+  margin-top: 120px;
   display: flex;
   flex-direction: column;
   height: 400px;
   text-align: center;
   padding: 0px 20px 0px 20px;
+}
+@media (max-width: 667px) {
+  #header .logo {
+    margin-top: 90px;
+  }
 }
 #header .logo #logo {
   width: 60%;
@@ -151,7 +163,7 @@ body {
 #header .logo h3 {
   color: #ffffff;
   font-family: gulim, sans-serif;
-  margin: 15px auto;
+  margin: 5px auto;
   font-size: 2rem;
   opacity: .8;
   font-weight: lighter;
@@ -169,12 +181,11 @@ body {
 }
 #header .logo .button {
   width: 110px;
-  height: 30px;
+  height: 40px;
   background-color: rgba(250, 250, 250, 0);
-  padding: 0px 20px;
+  padding: 0px 10px;
   border: 2px solid rgba(250, 250, 250, 0.5);
   border-radius: 22px;
-  text-align: center;
   font-family: sans-serif;
   margin: auto;
   text-decoration: none;
@@ -183,6 +194,9 @@ body {
   letter-spacing: 2px;
   z-index: 11;
   line-height: 30px;
+}
+#header .logo .button span {
+  text-align: center;
 }
 #header #wave {
   height: 250px;
@@ -222,7 +236,7 @@ body {
 #sidebar {
   width: 250px;
   height: 2000px;
-  background-color: rgba(250, 250, 250, 0.4);
+  background-color: rgba(255, 255, 255, 0.1);
   position: fixed;
   top: 0;
   bottom: 0;
@@ -286,20 +300,40 @@ body {
 #homeSection {
   margin: auto 10%;
 }
-<<<<<<< HEAD
 #scrollToTop {
   height: 60px;
   width: 60px;
   border-radius: 50%;
-  background-color: deepskyblue;
+  background-color: royalblue;
   position: fixed;
   right: 20px;
-  top: 50%;
+  top: 80%;
   z-index: 99;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  display: none;
 }
-=======
->>>>>>> c6d7df1fa8941e98ffb669c3ca6fb841e8f5bb7f
+#scrollToTop span,
+#scrollToTop span:before,
+#scrollToTop span:after {
+  width: 15px;
+  height: 3px;
+  top: 45%;
+  left: 32%;
+  background-color: transparent;
+  position: absolute;
+}
+#scrollToTop span:before {
+  content: '';
+  transform: rotate(45deg);
+  background-color: #fff;
+  left: 50%;
+}
+#scrollToTop span:after {
+  content: '';
+  transform: rotate(-45deg);
+  background-color: #fff;
+  left: -15%;
+}
 @-webkit-keyframes AnimationName {
   0% {
     background-position: 4% 0%;
