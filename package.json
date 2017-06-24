@@ -1,0 +1,25 @@
+{
+  "name": "webnostix",
+  "version": "1.0.0",
+  "description": "Webnostix website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moringaman/webnostix.git"
+  },
+  "author": "LDuffus",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/moringaman/webnostix/issues"
+  },
+  "homepage": "https://github.com/moringaman/webnostix#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-less": "^1.4.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "jit-grunt": "^0.10.0"
+  }
+}

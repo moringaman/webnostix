@@ -1,3 +1,5 @@
+// Main Less file
+
 html, body, h1, h2, h3, h4, button {
   margin: 0px;
   outline: none;
@@ -7,8 +9,8 @@ html, body, h1, h2, h3, h4, button {
 body {
  background-color: #fff;
   height: 2000px;
-font-family: 'Roboto', sans-serif;
-
+/*font-family: 'raleway','Roboto', sans-serif;*/
+font-family: raleway;
 }
 
 #header {
@@ -22,7 +24,7 @@ font-family: 'Roboto', sans-serif;
       display: flex;
       justify-content: center;
       align-items: center;
-      margin: 0px 0px 1000px 0px;
+      margin: 0px 0px 100px 0px;
       height: 700px;
       max-width: 100%;
       overflow: hidden;
@@ -136,7 +138,7 @@ font-family: 'Roboto', sans-serif;
     ul >li {
       display: inline;
       margin: 5px 25px 5px 25px;;
-      font-family: arial, sans serif;
+      font-family: raleway; /*arial, sans serif;*/
       line-height: 20px; 
       letter-spacing: 1px;
       
@@ -148,8 +150,8 @@ font-family: 'Roboto', sans-serif;
         }
     
     a {
-      font-size: 0.7rem;
-      font-weight: lighter;
+      font-size: 0.8rem;
+      font-weight:600;
       text-decoration: none;
       color: #fff;
       text-transform: uppercase;
@@ -171,9 +173,9 @@ font-family: 'Roboto', sans-serif;
   margin-top: 120px;
   display: flex;
   flex-direction: column;
-  height: 400px;
- text-align:center;
-    padding: 0px 20px 0px 20px;
+  height: 300px;
+  text-align:center;
+  padding: 0px 20px 0px 20px;
     
     @media (max-width: 667px) {
         margin-top: 90px; 
@@ -194,12 +196,13 @@ font-family: 'Roboto', sans-serif;
   
   h3{
     color:#ffffff;
-    font-family: gulim, sans-serif;
+    /*font-family: gulim, sans-serif;*/
+      font-family: 'Pacifico', cursive;
     margin:5px auto;
-    font-size: 2rem;
+    font-size: 3rem;
     opacity: .8;
     font-weight: lighter;
-    letter-spacing: 7px;
+    /*letter-spacing: 7px;*/
   
   }
   
@@ -208,17 +211,17 @@ font-family: 'Roboto', sans-serif;
     text-transform: italic;
     letter-spacing: 2px;
     font-family: arial, sans-serif;
-    font-size: 14px;
+    font-size: 18px;
     font-style: italic;
     font-weight: lighter;
     margin-bottom: 20px;
   }
   
   .button {
-    width: 110px;
+    width: 130px;
     height: 40px;
     background-color: rgba(250,250,250, 0.0);
-    padding: 0px 10px;
+    padding: 0px 5px;
     border: 2px solid rgba(250,250,250, 0.5);
     border-radius: 22px;
     font-family: sans-serif;
@@ -229,10 +232,11 @@ font-family: 'Roboto', sans-serif;
     //font-weight: bold;
     letter-spacing: 2px;
     z-index: 11;
-    line-height: 30px;
+    
       
       span{
           text-align: center;
+          line-height: 20px;
       }
       
   }
@@ -276,7 +280,7 @@ font-family: 'Roboto', sans-serif;
 
 #sidebar {
     width: 250px;
-    height: 2000px;
+    height: 1000px;
  // background-image: url("../../images/logo.svg");
     background-color: rgba(255,255,255, 0.1);
   position: fixed;
@@ -366,8 +370,88 @@ font-family: 'Roboto', sans-serif;
 
 //Section 1 
 #homeSection {
-    margin: auto 10%;;
+    margin: auto 10%;
+    position: relative;
+    align-content: center;
+    
+    #box1 {
+        position: absolute;
+        top: -260px;
+        width: 280px;
+        height:280px;
+        box-shadow: 4px 2px  6px rgba(0,0,0, 0.3);
+        z-index: 99;
+        background-color:rgba(84, 126, 212, 0.9);
+        color: cornflowerblue;
+        transform: translate(0%, -15%);
+        overflow:hidden;
+        text-align: left;
+        padding: 0% 0% 0% 0%;
+        vertical-align: middle;
+        border-radius: 50%;
+        margin-left: 10%;
+        
+        .card-btn {
+            position: absolute;
+            right: 20;
+            bottom: 20;
+        }
+        
+             .side-text-box {
+            position: relative;     
+            width: 100%;
+            height: 110%;
+            /*background-color:rgba(84, 126, 212, 0.8);*/
+                 background-color: transparent;
+            
+            /*transform: rotate(25deg);*/
+            float: left;
+            color: #fff;
+            margin-left:auto;
+            padding: 15% 0%;
+                 
+                 
+                 h1 {
+                     margin-left: 15%;
+                     margin-bottom: 15px;
+                     font-family: Raleway;
+                 }
+        }
+        
+        
+    }
+    
+   
 }
+
+.rotate-wrapper {
+    /*transform: rotate(10deg);  */
+    
+    .card-icon {
+    max-width: 200px;
+    display: block;
+    margin: 25% auto;
+    opacity: 0.8;
+   /* Flip image 
+    moz-transform: scaleX(-1);
+        -o-transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+        filter: FlipH;
+        -ms-filter: "FlipH";
+  */
+    }
+}
+
+.btn {
+    padding:10px 15px;
+    border-radius: 5px;
+    background-color:#48598F;
+    color:#fff;
+    text-decoration: none;
+    font-weight: 800;
+}
+
 
 #scrollToTop {
     height: 60px;
