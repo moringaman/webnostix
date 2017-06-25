@@ -370,58 +370,91 @@ font-family: raleway;
 
 //Section 1 
 #homeSection {
+    
     margin: auto 10%;
     position: relative;
     align-content: center;
     
-    #box1 {
-        position: absolute;
-        top: -260px;
-        width: 280px;
-        height:280px;
-        box-shadow: 4px 2px  6px rgba(0,0,0, 0.3);
-        z-index: 99;
-        background-color:rgba(84, 126, 212, 0.9);
+    .flex-container  {
+        
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
         color: cornflowerblue;
-        transform: translate(0%, -15%);
-        overflow:hidden;
-        text-align: left;
-        padding: 0% 0% 0% 0%;
-        vertical-align: middle;
-        border-radius: 50%;
-        margin-left: 10%;
+        position: absolute;
+        margin: auto;
+        top: -280px;
+        z-index: 99;
+        justify-content: center;
+        
+        @media (max-width: 1113px){
+                 
+               text-align: center;
+             }
+        
+        
+    
+        
+         h1 {
+                     
+                     right: 15%;
+                     margin-top: 30px;
+                     font-family: Raleway;
+                     color: #fff;
+             
+             @media (max-width: 1113px){
+                 
+                 color: #48598F;
+                 margin: 5px 0px;
+             }
+                
+                 }
+        
+        p {
+            margin-top: 25px;
+            margin-bottom: 20px;
+            font-size: 22px;
+            color: #8C9FCA;
+            
+             @media (max-width: 1113px){
+                 
+                 margin-bottom: 60px;
+                 
+             }
+            
+        }
+        
+        
+        #box1 {
+       
+            width: 280px;
+            height:280px;
+            box-shadow: 4px 2px  6px rgba(0,0,0, 0.3);
+            background-color:rgba(84, 126, 212, 0.9);
+            color: cornflowerblue;    
+            overflow:hidden;
+            vertical-align: middle;
+            border-radius: 50%;
+            margin-top: 40px;
         
         .card-btn {
             position: absolute;
             right: 20;
             bottom: 20;
-        }
+        }   
         
-             .side-text-box {
-            position: relative;     
-            width: 100%;
-            height: 110%;
-            /*background-color:rgba(84, 126, 212, 0.8);*/
-                 background-color: transparent;
-            
-            /*transform: rotate(25deg);*/
-            float: left;
-            color: #fff;
-            margin-left:auto;
-            padding: 15% 0%;
-                 
-                 
-                 h1 {
-                     margin-left: 15%;
-                     margin-bottom: 15px;
-                     font-family: Raleway;
-                 }
-        }
-        
-        
-    }
+      }
+    }  
+    
+    
     
    
+}
+
+.flex-item {
+    margin: 50px;
+    max-width: 500px;
 }
 
 .rotate-wrapper {
@@ -431,7 +464,8 @@ font-family: raleway;
     max-width: 200px;
     display: block;
     margin: 25% auto;
-    opacity: 0.8;
+    opacity: 0.9;
+    box-shadow: 2 2 4 rgba(0,0,0, 0.5);
    /* Flip image 
     moz-transform: scaleX(-1);
         -o-transform: scaleX(-1);
@@ -450,6 +484,11 @@ font-family: raleway;
     color:#fff;
     text-decoration: none;
     font-weight: 800;
+    
+    @media(min-width: 1113px){
+       float:left; 
+    }
+    
 }
 
 
