@@ -110,6 +110,7 @@
             },
             cacheDom: function () {
                 //cache menu links
+                this.initScrollPos = 0;
                 this.$window = headerModule.$window;
                 this.$element = headerModule.$element.find('#topNav');
                 //console.log(this.$element);
@@ -133,6 +134,8 @@
                // this.$lnkHome = this.$element.find('#blog');
                 //cache section divs
                 this.$homeSection = $('#HomeSection');
+                this.$Header = $('#header');
+                this.$body = $('body');
             },
             
             bindEvents: function () {
@@ -159,7 +162,11 @@
         
             pageScrollPos: function () {
                var scrollPos = headerModule.$window.scrollTop();
-                console.log(scrollPos);
+                this.$Header.css('background-position-y', -scrollPos/2);
+                this.$body.css('background-position-y', -scrollPos/2);
+                if (scrollPos > scrollPos) {
+                    moveHeaderBg(scrollPos);
+                }
                 if (scrollPos > 350) {
                    // show scroll to top button
                     this.$btnToTop.show('fast');
@@ -179,6 +186,9 @@
             $('html, body').animate({
                scrollTop: 0
               }, 1000, 'swing');
+        },
+        moveHeaderBg: function (scrollPos) {
+            console.log('mover header image');
         }
         };         
                 

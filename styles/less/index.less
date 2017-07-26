@@ -10,10 +10,11 @@ body {
  background-color: #fff;
     background: url("../../images/officedesk.jpg");
      background-position: center;
+    background-position-y: 0px;
     background-attachment: fixed;
     background-size: cover;
     repeat: no-repeat;
-  height: 2000px;
+  height: 3000px;
 /*font-family: 'raleway','Roboto', sans-serif;*/
 font-family: raleway;
 }
@@ -22,6 +23,7 @@ font-family: raleway;
     background: url("../../images/officedesk.jpg"); 
 /* background: rgb(82,126,228);*/
     background-position: center;
+    background-position-y: 0px;
     background-attachment: fixed;
     background-size: cover;
     repeat: no-repeat;
@@ -127,7 +129,7 @@ font-family: raleway;
     
     #navlogo{
         width: 40px;
-        margin-top: 15px;
+        margin-top: 20px;
         margin-left: 10px;
         margin-right: 50px;
         position: absolute;
@@ -204,7 +206,7 @@ font-family: raleway;
     /*font-family: gulim, sans-serif;*/
       font-family: 'Pacifico', cursive;
     margin:5px auto;
-    font-size: 3rem;
+    font-size: 3em;
     opacity: .8;
     font-weight: lighter;
     /*letter-spacing: 7px;*/
@@ -303,7 +305,7 @@ font-family: raleway;
         background-color: transparent;
         border-radius: 50%;
         position: relative;
-        top: 15px;
+        top: 20px;
         left: 190px;
         transform: rotate(45deg);
         
@@ -382,10 +384,18 @@ font-family: raleway;
     
     .flex-container  {
         
-        width: 100%;
+        min-width: 100%;
         display: flex;
+        display: -webkit-flex;
+	    display: -moz-flex;
+	    display: -ms-flex;
         flex-direction: row;
         flex-wrap: wrap;
+        flex-shrink: 1;
+        flex: 1 0 auto;
+        -webkit-flex-flow: row wrap;
+	    -moz-flex-flow: row wrap;
+	    -ms-flex-flow: row wrap;
         color: cornflowerblue;
         position: absolute;
         margin: auto;
@@ -402,14 +412,16 @@ font-family: raleway;
     
         
          h1 {
-                     
+                     font-size: 2rem;
+                     font-weight: 200;
+                     width: 115%;
                      right: 15%;
                      margin-top: 30px;
                      font-family: Raleway;
                      color: #fff;
              
              @media (max-width: 1113px){
-                 
+                 width: 100%;
                  color: #48598F;
                  margin: 5px 0px;
              }
