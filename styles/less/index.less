@@ -382,6 +382,7 @@ font-family: raleway;
     position: relative;
     align-content: center;
     
+    
     .flex-container  {
         
         min-width: 100%;
@@ -398,18 +399,28 @@ font-family: raleway;
 	    -ms-flex-flow: row wrap;
         color: cornflowerblue;
         position: absolute;
-        margin: auto;
+        margin: auto auto;
         top: -280px;
         z-index: 99;
         justify-content: center;
+        align-items: center;
+
+        #desktop-app {
+            max-width: 70%;
+            box-shadow: 4px 4px 25px rgba(0,0,0, 0.4);
+            z-index:101
+        }
+
+        #afk-website {
+            z-index: 100;
+            transform: translateX(-200px);
+        }
         
         @media (max-width: 1113px){
                  
                text-align: center;
              }
         
-        
-    
         
          h1 {
                      font-size: 2rem;
@@ -442,26 +453,7 @@ font-family: raleway;
             
         }
         
-        
-        #box1 {
-       
-            width: 280px;
-            height:280px;
-            box-shadow: 4px 2px  6px rgba(0,0,0, 0.3);
-            background-color:rgba(84, 126, 212, 0.9);
-            color: cornflowerblue;    
-            overflow:hidden;
-            vertical-align: middle;
-            border-radius: 50%;
-            margin-top: 40px;
-        
-        .card-btn {
-            position: absolute;
-            right: 20;
-            bottom: 20;
-        }   
-        
-      }
+    
     }  
     
     
@@ -469,10 +461,6 @@ font-family: raleway;
    
 }
 
-.flex-item {
-    margin: 50px;
-    max-width: 500px;
-}
 
 .rotate-wrapper {
     /*transform: rotate(10deg);  */
@@ -480,7 +468,7 @@ font-family: raleway;
     .card-icon {
     max-width: 200px;
     display: block;
-    margin: 25% auto;
+    margin: auto auto;
     opacity: 0.9;
     box-shadow: 2 2 4 rgba(0,0,0, 0.5);
    /* Flip image 
