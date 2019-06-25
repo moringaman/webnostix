@@ -6,13 +6,13 @@
 /*jslint vars: true, plusplus: true, devel: true, nomen: true, indent: 4, maxerr: 50 */ /* define */
 
 ($(document).ready(function () {
-    
+
     "use strict";
-    
+
     var headerModule = {
         // Set initial variables & Call Module functions
-        
-        
+
+
         init: function () {
             this.sideClosed = true;
             this.shoNavList = true;
@@ -21,7 +21,7 @@
             this.toggleNav();
             this.shoLogo();
         },
-        // Cache our mudules DOM elements 
+        // Cache our mudules DOM elements
         cacheDom: function () {
             this.$window = $(window);
             this.$element = $('#header');
@@ -71,10 +71,10 @@
             console.log('toggle ' + this.$sideBar);
             if (this.shoNavList) {
                 this.$navList.fadeToggle(2000);
-    
+
             }
         },
-        
+
         isBarClosed: function () {
             console.log(this.sideClosed);
             if (!this.sideClosed) {
@@ -83,7 +83,7 @@
                 return -444;
             }
         },
-       
+
         rotateAnimation: function () {
             var btnClose = this.$btnClose;
             $({t: 0}).animate(
@@ -100,10 +100,10 @@
             );
         }
     };
-        
-       
+
+
     var navigationScroller = {
-            
+
             init: function () {
                 this.cacheDom();
                 this.bindEvents();
@@ -118,10 +118,10 @@
                 console.log(this.$list.length);
                // console.log(this.$list);
                // Iterate through ul and cache each child element
-               
+
                 var items = this.$list.find("li");
                 console.log(items.length);
-                for (var i = 0; i < items.length; ++i) {   
+                for (var i = 0; i < items.length; ++i) {
                 console.log((items[i]).className);
                 }
                 this.$btnToTop = headerModule.$element.find('#scrollToTop');
@@ -137,7 +137,7 @@
                 this.$Header = $('#header');
                 this.$body = $('body');
             },
-            
+
             bindEvents: function () {
                 //link.on('click', this.scrollTo.bind(this, link));
                 this.$lnkHome.on('click', this.scrollTo.bind(this, this.$lnkHome));
@@ -145,27 +145,30 @@
                 this.$lnkPortfolio.on('click', this.scrollTo.bind(this, this.$lnkPortfolio));
                 this.$window.on('scroll', this.pageScrollPos.bind(this));
                 this.$btnToTop.on('click', this.scrollTop.bind(this));
-            
+
             },
-        
+
             scrollTo: function (linkName) {
-               
+
               var $section = '#' + linkName[0].innerHTML + 'Section';
              var toPosition = $($section).offset().top;
                 console.log($section);
                  console.log(toPosition);
-              
+
                $('html, body').animate({
                scrollTop: toPosition
               }, 2000, 'swing');
             },
-        
+
             pageScrollPos: function () {
                var scrollPos = headerModule.$window.scrollTop();
                 this.$Header.css('background-position-y', -scrollPos/2);
                 this.$body.css('background-position-y', -scrollPos/2);
                 if (scrollPos > scrollPos) {
                     moveHeaderBg(scrollPos);
+                }
+                if (scrollPos > 50 < 350) {
+                  this.$element.css('background-color', '#fffff');
                 }
                 if (scrollPos > 350) {
                    // show scroll to top button
@@ -180,7 +183,7 @@
                     headerModule.$sideBar.css('background-color', 'rgba(255,255,255, 0.2)');
                 }
             },
-        
+
         scrollTop: function () {
             //scroll window to the top
             $('html, body').animate({
@@ -190,10 +193,8 @@
         moveHeaderBg: function (scrollPos) {
             console.log('mover header image');
         }
-        };         
-                
+        };
+
     headerModule.init();
     navigationScroller.init();
 }));
-
-

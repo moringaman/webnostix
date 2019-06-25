@@ -1,0 +1,77 @@
+@import 'colors';
+@import 'typography';
+
+#service-subheading {
+  transform: translateY(20rem);
+}
+
+#service-heading {
+  font-family: roboto, sans-serif;
+}
+#services {
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+    transform: translateY(15rem);
+    width: 100%;
+    min-height: 20rem;
+    place-items: center center;
+    text-align: center;
+
+
+    .service {
+         width: 25rem;
+        height: 16rem;
+        display:grid;
+        grid-template-columns: 20rem;
+        //  border: solid 2px #ccc;
+          justify-content: center;
+         padding: 1rem;
+         place-items: top center;
+         border-radius: 5px;
+
+         &-name {
+           grid-row: 4 / 5;
+           font-size: 1.5rem !important;
+           color: #666 !important;
+           margin-bottom: 13rem;
+         }
+
+
+        #curly-braces {
+          transform: translateY(85%);
+        }
+
+        #shopping-cart {
+          transform: translate( -10%, 95%);
+        }
+
+        &-circle__icon {
+          z-index: 3000;
+          width: 3rem;
+          transform: translateY(60%);
+        }
+
+        &-circle__outer {
+            width: 8rem;
+            height:8rem;
+            // border:8px solid @base-color;
+            // opacity: 0.2;
+            border-radius: 50%;
+            grid-column: 1/1;
+            grid-row: 1 /1;
+            margin: auto auto;
+        }
+        &-circle__inner {
+            width: 7.5rem;
+            height:7.5rem;
+            grid-row: 1 / 2;
+            // background-image('../../images/html5_icon_FineLine.svg')
+            // background-color:rgba(236, 132, 13, 0.7);
+            background-color:@accent-color2;
+            border-radius: 50%;
+            margin: 50% auto;
+            transform: translateY(110%);
+            // opacity: 0.1;
+        }
+    }
+}
